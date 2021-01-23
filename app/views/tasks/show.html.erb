@@ -1,0 +1,12 @@
+<h1><%= @task.title.titlecase %></h1>
+<div id="detail" class="alert alert-info" role="alert">
+  <%= @task.details %>
+</div>
+<div id="completed" class="my-3">
+  <% if @task.completed? %>
+    <%= fa_icon "check-square" %> This task is complete
+  <% else %>
+    <%= fa_icon "square" %> This task is not yet complete
+  <% end %>
+</div>
+<%= button_to "Back to Tasks", tasks_path, class: "btn btn-primary", method: "get" %>
