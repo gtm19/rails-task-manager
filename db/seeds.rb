@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-20.times do
+8.times do
   task = Task.new(
     title: "#{Faker::Verb.base} #{Faker::Hacker.noun}",
     details: Faker::Hacker.say_something_smart,
