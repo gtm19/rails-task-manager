@@ -5,6 +5,7 @@
     <li class="list-group-item">
       <%= fa_icon task.completed? ? "check-square" : "square" %>
       <%= link_to task.title, task_path(task) %>
+      <%= link_to fa_icon("times", style: "color: red;"), task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
     </li>
     <% end %> 
   </ul>
