@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   # Show a single task
   get "tasks/:id", to: "tasks#show", as: :task
   # Edit a task
+  get "tasks/:id/edit", to: "tasks#edit", as: :edit_task
+  patch "tasks/:id", to: "tasks#update"
   # Delete a task
 end
